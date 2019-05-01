@@ -1,0 +1,17 @@
+{
+  "name": "dupe-detector",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc index.ts",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "typescript": "3.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "11.13.8"
+  }
+}
