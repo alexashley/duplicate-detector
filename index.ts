@@ -82,8 +82,6 @@ const failWithMessage = (message: string): void => {
 
     const statResults = await asyncPool(filesWithPath, stat, 10);
 
-    console.log('len', statResults.length);
-
     const errors = statResults.filter((r) => r.error);
 
     if (errors.length) {
@@ -97,5 +95,10 @@ const failWithMessage = (message: string): void => {
         .map((r) => r.value)
         .filter((s) => s.isFile());
 
-
+    // TODO:
+    // - filter out large files
+    // - read file into buffer
+    // - hash contents of buffer
+    // - zip file path and hash
+    // - pretty print duplicates
 })();
